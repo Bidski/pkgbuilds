@@ -1,0 +1,17 @@
+pkgbase = texlive-elsarticle
+	pkgdesc = A LaTeX document class for typesetting journal articles for Elsevier's journals
+	pkgver = 2020.11.24
+	pkgrel = 1
+	url = http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle
+	arch = any
+	license = GPL
+	makedepends = make
+	depends = texlive-core
+	source = texlive-elsarticle-2020.11.24.zip::http://mirrors.ctan.org/macros/latex/contrib/elsarcticle.zip
+	md5sums = 368324a0f0ea17d570c213cacda355fb
+	sha1sums = b5d5186b09be8e4e6c0bb8d96e573070b54bd874
+	sha256sums = 92a21f5fa34ea8e0ec7db193e4504e480eb42ace156970b7b2d52c7c49f93ab8
+	sha384sums = 13a135a04aa5666cda33564924940718dfacf1448b6fc9fc0b087c5b4058594e804cfa3bdb02ea0be75834384c8ca0c3
+	sha512sums = 7bb892e0c23e71ba3bac8eb5fdf56c77195addef9b72a0803dd0700852a2338c16c16221679703e2df8b19f9796a5f4ba29fdd2ce9877880d159503f394b58b9
+
+pkgname = texlive-elsarticle

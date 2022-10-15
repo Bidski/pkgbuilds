@@ -1,0 +1,37 @@
+# Maintainer: Bidski <bidskii at gmail dot com>
+pkgname=texlive-elsarticle
+pkgver=2020.11.24
+pkgrel=1
+license=('GPL')
+depends=('texlive-core')
+makedepends=('make')
+pkgdesc="A LaTeX document class for typesetting journal articles for Elsevier's journals"
+url="http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle"
+arch=('any')
+source=("${pkgname}-${pkgver}.zip::http://mirrors.ctan.org/macros/latex/contrib/elsarcticle.zip")
+md5sums=('368324a0f0ea17d570c213cacda355fb')
+sha1sums=('b5d5186b09be8e4e6c0bb8d96e573070b54bd874')
+sha256sums=('92a21f5fa34ea8e0ec7db193e4504e480eb42ace156970b7b2d52c7c49f93ab8')
+sha384sums=('13a135a04aa5666cda33564924940718dfacf1448b6fc9fc0b087c5b4058594e804cfa3bdb02ea0be75834384c8ca0c3')
+sha512sums=('7bb892e0c23e71ba3bac8eb5fdf56c77195addef9b72a0803dd0700852a2338c16c16221679703e2df8b19f9796a5f4ba29fdd2ce9877880d159503f394b58b9')
+
+build()
+{
+    cd "${srcdir}/elsarticle"
+    latex elsarticle.ins
+
+    cd doc
+    make
+}
+
+package()
+{
+    cd "${srcdir}/elsarticle"
+
+    mkdir -p "${pkgdir}/usr/share/texmf/tex/latex/elsarticle"
+    cp {*.cls,*.bst,*.tex} "${pkgdir}/usr/share/texmf/tex/latex/elsarticle"
+
+    mkdir -p "${pkgdir}/usr/share/doc/texlive-elsarticle"
+    cd "${srcdir}/elsarticle/doc"
+    cp *.pdf "${pkgdir}/usr/share/doc/texlive-elsarticle"
+}
