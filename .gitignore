@@ -1,2 +1,5 @@
-
+/src/
+/pkg/
+*.zip
+*.tar*
 nuclear-git/nuclear/
