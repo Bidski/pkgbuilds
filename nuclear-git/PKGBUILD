@@ -1,7 +1,7 @@
 # Maintainer: Bidski <bidskii at gmail dot com>
 _pkgname=nuclear
 pkgname=${_pkgname}-git
-pkgver=r890.f4a60c7
+pkgver=r897.81a715a
 pkgrel=1
 pkgdesc="NUClear is a C++ software framework designed to aid in the development of real time modular systems."
 arch=('x86_64' 'i686')
