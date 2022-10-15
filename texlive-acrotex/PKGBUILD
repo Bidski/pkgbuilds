@@ -1,6 +1,6 @@
 # Maintainer: Bidski <bidskii at gmail dot com>
 pkgname=texlive-acrotex
-pkgver=2021.10.03
+pkgver=2021.10.14
 pkgrel=1
 license=('GPL')
 depends=('texlive-core')
